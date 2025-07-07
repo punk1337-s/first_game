@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://ccy8pggw1e6xf"]
+
+[ext_resource type="Script" uid="uid://djglg8nweol5x" path="res://control.gd" id="1_qtu10"]
+[ext_resource type="Texture2D" uid="uid://dtkrvkux0e1wo" path="res://assets/knife3.png" id="2_ee4bf"]
+[ext_resource type="Texture2D" uid="uid://pccxl5ecsjds" path="res://assets/knife4.png" id="3_kbped"]
+[ext_resource type="Texture2D" uid="uid://dsulflvgqlit6" path="res://assets/knife7.png" id="4_ee4bf"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qtu10")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_left = 102.0
+offset_top = 125.0
+offset_right = 142.0
+offset_bottom = 306.0
+texture = ExtResource("2_ee4bf")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 151.0
+offset_top = 427.0
+offset_right = 191.0
+offset_bottom = 595.0
+texture = ExtResource("3_kbped")
+
+[node name="Camera2D" type="Camera2D" parent="TextureRect2"]
+
+[node name="Knife7" type="Sprite2D" parent="."]
+position = Vector2(325, 311)
+texture = ExtResource("4_ee4bf")

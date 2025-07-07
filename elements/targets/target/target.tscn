@@ -1,0 +1,84 @@
+[gd_scene load_steps=8 format=3 uid="uid://ca4akgdrc6gip"]
+
+[ext_resource type="Script" uid="uid://drj5718d65n3p" path="res://elements/targets/target/target.gd" id="1_ueniy"]
+[ext_resource type="Texture2D" uid="uid://cy61tdinvfpay" path="res://assets/target1.png" id="2_tpwst"]
+[ext_resource type="Texture2D" uid="uid://cso6wdxm7tlg8" path="res://assets/knife1.png" id="3_ropi6"]
+[ext_resource type="Texture2D" uid="uid://c3pqjrpygg8f0" path="res://assets/target1_1.png" id="4_iv5lu"]
+[ext_resource type="Texture2D" uid="uid://dpv4pch7wmw7d" path="res://assets/target1_2.png" id="5_6hx5f"]
+[ext_resource type="Texture2D" uid="uid://djf4vlqrns7hj" path="res://assets/target1_3.png" id="6_ne2bc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a5un5"]
+radius = 125.0
+
+[node name="target" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_ueniy")
+
+[node name="Target1" type="Sprite2D" parent="."]
+position = Vector2(-1, -2)
+texture = ExtResource("2_tpwst")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_a5un5")
+
+[node name="items_container" type="Node2D" parent="."]
+show_behind_parent = true
+
+[node name="targetParticles2D" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 1
+texture = ExtResource("4_iv5lu")
+lifetime = 2.0
+one_shot = true
+direction = Vector2(0, -1)
+spread = 180.0
+gravity = Vector2(0, 400)
+initial_velocity_min = 150.0
+initial_velocity_max = 250.0
+angular_velocity_min = -100.0
+angular_velocity_max = 100.0
+
+[node name="targetParticles2D2" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 1
+texture = ExtResource("5_6hx5f")
+lifetime = 2.0
+one_shot = true
+direction = Vector2(0, -1)
+spread = 180.0
+gravity = Vector2(0, 400)
+initial_velocity_min = 150.0
+initial_velocity_max = 250.0
+angular_velocity_min = -100.0
+angular_velocity_max = 100.0
+
+[node name="targetParticles2D3" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 1
+texture = ExtResource("6_ne2bc")
+lifetime = 2.0
+one_shot = true
+direction = Vector2(0, -1)
+spread = 180.0
+gravity = Vector2(0, 400)
+initial_velocity_min = 150.0
+initial_velocity_max = 250.0
+angular_velocity_min = -100.0
+angular_velocity_max = 100.0
+
+[node name="knifeParticles2D" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 5
+texture = ExtResource("3_ropi6")
+lifetime = 2.0
+one_shot = true
+preprocess = 0.1
+explosiveness = 1.0
+direction = Vector2(0, -1)
+spread = 80.0
+gravity = Vector2(0, 600)
+initial_velocity_min = 300.0
+initial_velocity_max = 300.0
+angular_velocity_min = -200.0
+angular_velocity_max = 200.0

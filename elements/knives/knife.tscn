@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://c45ro1d44r5gd"]
+
+[ext_resource type="Script" uid="uid://boltte3jtl1a4" path="res://elements/knives/knife.gd" id="1_tgba1"]
+[ext_resource type="Texture2D" uid="uid://cso6wdxm7tlg8" path="res://assets/knife1.png" id="2_1spik"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tgba1"]
+radius = 12.0
+height = 140.0
+
+[node name="knife" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 14
+script = ExtResource("1_tgba1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_1spik")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 2)
+shape = SubResource("CapsuleShape2D_tgba1")
