@@ -11,12 +11,13 @@ config_version=5
 [application]
 
 config/name="godot4-mobile-game-course"
-run/main_scene="uid://cvskn7j5mkl1o"
+run/main_scene="uid://dknbfqe8pcrbs"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://assets/target5.png"
 
 [autoload]
 
+Events="*res://core/events.gd"
 Globals="*res://core/Globals.gd"
 
 [display]
