@@ -23,8 +23,6 @@ var speed := PI
 	$targetParticles2D3
 ]
 
-func _ready():
-	add_default_items(3, 2)
 
 func explode():
 	sprite.hide()
@@ -40,6 +38,14 @@ func explode():
 	tween.parallel().tween_property(knife_particles, "modulate", Color("ffffff00"), explosion_time)
 	
 	tween.play()
+	await tween.finished
+	Globals.change_stage(Globals.current_stage + 1)
+
+func take_damage():
+	if Globals.knives == 0:
+		explode()
+	
+
 
 func _physics_process(delta: float):
 	rotation += speed * delta

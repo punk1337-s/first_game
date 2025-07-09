@@ -1,6 +1,5 @@
-[gd_scene load_steps=6 format=3 uid="uid://c5vtouk1gb7m5"]
+[gd_scene load_steps=5 format=3 uid="uid://c5vtouk1gb7m5"]
 
-[ext_resource type="PackedScene" uid="uid://ccv5hfgti6x2s" path="res://elements/UI/HUD/hud.tscn" id="1_nf8f5"]
 [ext_resource type="StyleBox" uid="uid://b0uj5vnuh56cb" path="res://styles/green_line.tres" id="2_uxvel"]
 [ext_resource type="Texture2D" uid="uid://cso6wdxm7tlg8" path="res://assets/knife1.png" id="3_6jl01"]
 [ext_resource type="PackedScene" uid="uid://diu3q8ycoj75k" path="res://scenes/knife_store/shop_item/shop_item.tscn" id="4_uxvel"]
@@ -13,8 +12,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="HUD" parent="." instance=ExtResource("1_nf8f5")]
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
