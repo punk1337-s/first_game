@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cvqn2oc2i16g5" path="res://assets/apple3.png" id="4_q82pg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kixnd"]
-radius = 36.0
+radius = 47.0425
 
 [node name="apple" type="Node2D"]
 script = ExtResource("1_bmsxf")

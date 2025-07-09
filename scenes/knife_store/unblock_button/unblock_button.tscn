@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=3 uid="uid://c66rem711p58d"]
+
+[ext_resource type="Texture2D" uid="uid://c076ottpxnfh4" path="res://assets/button2.png" id="1_dqsvt"]
+[ext_resource type="Texture2D" uid="uid://v7i8pj2qj2no" path="res://assets/knife_ico_1.png" id="2_e02mg"]
+[ext_resource type="Texture2D" uid="uid://dfoxeyqgynyxa" path="res://assets/apple_ico.png" id="3_nwra5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fg2a0"]
+texture = ExtResource("1_dqsvt")
+texture_margin_top = 16.0
+texture_margin_bottom = 14.0
+region_rect = Rect2(0.5, 0, 480, 141.5)
+
+[node name="UnblockButton" type="PanelContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_fg2a0")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("2_e02mg")
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = -5
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "UNBLOCK"
+
+[node name="Label2" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "RANDOM"
+
+[node name="Control2" type="Control" parent="HBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = -5
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+texture = ExtResource("3_nwra5")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "250"
+
+[node name="Control" type="Control" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
